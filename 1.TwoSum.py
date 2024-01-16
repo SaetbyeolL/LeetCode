@@ -10,16 +10,16 @@ class Solution(object):
         :rtype: List[int]
         """
         
-#1) hash map
+#1) hash map(dictionary) : O(n)
 class Solution(object):
     def twoSum(self, nums, target):
-        num_to_index = {} #create dictionary
+        indices = {} #create dictionary
         
         for i, num in enumerate(nums): #
             diff = target - num
-            if diff in num_to_index: #check diff value is in hash map
-                return [num_to_index[diff], i] # return two numbers' index
-            num_to_index[num] = i #store current element and index in hash map
+            if diff in indices: #check diff value is in hash map
+                return [indices[diff], i] # return two numbers' index
+            indices[num] = i #store current element and index in hash map
         
 solution = Solution()    
 nums = [2,7,11,15]            
@@ -32,7 +32,7 @@ print(twoSum)
 
 
 
-#2) double-for loop
+#2) double-for loop : O(n^2)
 class Solution(object):
     def twoSum(self, nums, target):
         n = len(nums)
@@ -45,3 +45,44 @@ solution = Solution()
 nums = [2,7,11,15]            
 twoSum = solution.twoSum(nums, 9)
 print(twoSum)
+
+
+
+#3) set : O(n)
+class Solution(object):
+    def twoSum(self, nums, target):
+        num_set = set() #create set()
+        
+        for i, num in enumerate(nums):
+            diff = target - num
+            if diff in num_set:
+                return [nums.index(diff), i]
+            num_set.add(i)
+
+nums1 = [2, 7, 11, 15]
+target1 = 9
+sol = Solution()
+result1 = sol.twoSum(nums1, target1)
+print(result1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
