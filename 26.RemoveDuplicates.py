@@ -34,9 +34,9 @@ class Solution:
                 # nums[i] = '_'
                 
                 return uniqueCount
-
-
-
+    
+ 
+ 
 #test case
 sol = Solution()
 nums1 = [1,1,2]
