@@ -10,26 +10,23 @@
         
 
 
+# Solution: Time complexity: O(n), Memory complexity: O(1)
 from typing import List
 class Solution:
     def plusOne(self, digits: List[int]) -> int:
         
         n = len(digits) # list length
         total = 0
-        result = [] 
         
         for i in range(n):     
-            result.append(digits[i])
             if digits[i] != 0: 
-                result[i] = (10** ((n-1)-i)) * digits[i] # multiply 10**n each elements
-                total += result[i]
+                digits[i] = (10** ((n-1)-i)) * digits[i] # multiply 10**n each elements
+                total += digits[i]
 
         total += 1
         total_list = [int(j) for j in str(total)]
         
         return total_list
-            
-
                 
                 
                 
