@@ -15,13 +15,26 @@ class Solution:
         if x == 0 or x == 1:
             return x
         
+        left, right = 0, x                     # Range for binary search
+        result = 0                             # Variable to store the square root
         
-
-
-
-
-
-
+        while left <= right:
+            mid = left +  (right - left) // 2  # square of the midpoint, //: rounded down to the nearest whole number
+            square = mid * mid
+            
+            if square == x:
+                return mid                     # find the exact square root
+            
+            if square < x:
+                result = mid
+                left = mid + 1
+            else:
+                right = mid - 1
+            
+            return result
+            
+            
+    
 # Test
 # sol = Solution()
 # x1 = 4
