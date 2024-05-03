@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/description/?envType=featured-list&envId=top-interview-questions?envType=featured-list&envId=top-interview-questions
 
-# Given a string 's', find the length of the longest substring without repaeting characters.
+# Given a string 's', find the length of the longest substring without repeating characters.
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -17,26 +17,15 @@ class Solution:
         
         return max_length
         
-        
-        
-        
-        
-        
-        
-        
-        
-
-
-
-
 
 # Test
+sol = Solution()
 s1 = "abcabcbb"
-print(lengthOfLongestSubstring(s1))
+print(sol.lengthOfLongestSubstring(s1))
 s2 = "bbbbb"
-print(lengthOfLongestSubstring(s2))
+print(sol.lengthOfLongestSubstring(s2))
 s3 = "pwwkew"
-print(lengthOfLongestSubstring(s3))
+print(sol.lengthOfLongestSubstring(s3))
 
 
 
