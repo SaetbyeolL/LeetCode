@@ -13,6 +13,7 @@ from typing import List
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+        
 
 
 
@@ -22,5 +23,16 @@ class Solution:
 
 
 
+#test case
+sol = Solution()
+nums1 = [3,2,2,3]
+val1 = 3
+k1 = sol.removeElement(nums1, val1)
+print(k1)
+
+nums2 = [0,1,2,2,3,0,4,2]
+val2 = 2
+k1 = sol.removeElement(nums2, val2)
+print(k2)
 
 
